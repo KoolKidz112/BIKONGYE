@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BIKONGYE</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./src/style.css" />
+  </head>
+
+  <body>
+    <div id="head">
+      <img src="./src/Bikongye.png" alt="BIKONGYE" /><br />
+      <strong class="brand">VERY BASIC CRYPTO MINING SIM</strong>
+      <hr style="margin-top: 25px;" />
+    </div>
+    <div id="create">
+      <h4>
+        BEGIN BY CREATING YOUR CRYPTOCURRENCY AND DECLARING ITS INITIAL VALUE
+      </h4>
+      <strong>NAME:</strong>
+      <input
+        id="cr-name"
+        type="text"
+        minlength="2"
+        maxlength="20"
+        value="Bitcoin"
+        placeholder="Bitcoin"
+        style="width: 100px;"
+      />
+      <br />
+      <strong>CALLSIGN:</strong>
+      <input
+        id="cr-call"
+        type="text"
+        minlength="3"
+        maxlength="4"
+        value="BTC"
+        placeholder="BTC"
+        style="width: 50px;"
+      />
+      <br />
+      <strong>INITIAL VALUE:</strong>
+      <input
+        id="cr-val"
+        type="number"
+        min="0.00000001"
+        max="999999"
+        value="60000"
+        placeholder="60,000"
+        style="width: 70px;"
+      />
+      BKG
+      <br />
+      <div class="horiz-container">
+        <button class="btn" id="btn-start">START</button>
+      </div>
+      <hr />
+    </div>
+    <div id="main" class="hide">
+      <!-- Hidden until start -->
+      <div id="stats">
+        <h3>STATS</h3>
+        <h4 id="stat-main">Current cryptocurrency: <em>N/A</em> [N/A]</h4>
+        <h5 id="stat-value">Current value: <strong>N/A</strong></h5>
+        <h6 id="stat-bal">
+          Current balance: <strong>0</strong> N/A | <strong>0</strong> BKG
+        </h6>
+        <hr />
+      </div>
+      <div id="purchase">
+        <div id="purcrip">
+          <h5 id="purc-call">Purchase N/A:</h5>
+          <input
+            type="number"
+            style="width: 100px;"
+            value=""
+            id="purchase-val"
+          />
+          <span id="purc-detail">BKG = N/A N/A</span>
+          <button class="btn" id="purc-cr">BUY</button><br />
+          <span id="purc-result"></span>
+        </div>
+        <div id="purbal">
+          <input type="number" style="width: 100px;" value="" id="pur2-val" />
+          <span id="pur2-detail">N/A = N/A BKG (12% fee)</span>
+          <button class="btn" id="pur2-cr">BUY</button><br />
+          <span id="pur2-result"></span>
+          <hr />
+        </div>
+        <div id="purminer">
+          <h5>Purchase a miner!</h5>
+          <div id="item-choices" class="horiz-container">
+            <!-- <div id="rasp-pi" class="item-slot">
+              <strong>Raspberry Pi 4</strong><br />
+              <em>Max 100 hashes per second (N/A N/A/s)</em><br />
+              <span>0 BKG | 0 N/A</span>
+            </div> -->
+          </div>
+          <div
+            id="item-purchase-final"
+            class="horiz-container"
+            style="margin: 10px;"
+          >
+            ID:
+            <input type="number" style="width: 40px;" />
+            <button class="btn" style="margin-left: 10px;">BUY</button>
+          </div>
+        </div>
+      </div>
+      <div id="warehouse" class="horiz-container">
+        <!-- Add storage upgrades -->
+        <div id="storage">
+          <div class="slot">
+            <strong class="item-id">1</strong>
+            <br />
+            <span>Mining at <em>100</em> N/A/s</span>
+          </div>
+          <div class="slot">
+            <strong class="item-id">2</strong>
+            <br />
+            <span>Mining at <em>100</em> N/A/s</span>
+          </div>
+          <div class="slot">
+            <strong class="item-id">3</strong>
+            <br />
+            <span>Mining at <em>100</em> N/A/s</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
